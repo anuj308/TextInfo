@@ -11,7 +11,7 @@ import Alerts from "./components/Alerts.js";
 function App() {
   const [Alert, setAlert] = useState(null);
   const [mode, setmode] = useState("");
-  const showAlert = (e) => {
+  const showAlert = (e) => { 
     setAlert(e);
     setTimeout(() => {
       setAlert(null);
