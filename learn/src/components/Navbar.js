@@ -17,7 +17,7 @@ export default function Navbar(props) {
       </Link> */}
       <a
         className="navbar-brand nav-text-main "
-        hrefto="/"
+        href="/"
         style={{ color: props.withMode.textcolor,padding:'0px 5px 0px 5px'}}
       >
         {props.title}

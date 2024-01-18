@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState } from "react";
-import About from "./components/About.js";
+// import About from "./components/About.js";
 import Navbar from "./components/Navbar.js";
 import TextForm from "./components/TextForm.js";
 import Alerts from "./components/Alerts.js";
@@ -115,6 +115,11 @@ function App() {
           <Navbar mode={setModes} withMode={mode} title="TextInfo" aboutText='About'/>
           <div class="container">
             <Alerts Alert={Alert} />
+            <TextForm
+            withMode={mode}
+            Alert={showAlert}
+            heading="Enter Text to analyse"
+            />
           </div>
       
     </>
