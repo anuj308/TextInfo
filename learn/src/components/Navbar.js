@@ -1,19 +1,27 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   return (
+    // for hositing in github pages replacing Link , to to a and href as it does not support routes
     <div
       className={`navbar navbar-expand-lg `}
     >
-      <Link
+      {/* <Link
         className="navbar-brand nav-text-main "
         to="/"
         style={{ color: props.withMode.textcolor,padding:'0px 5px 0px 5px'}}
       >
         {props.title}
-      </Link>
+      </Link> */}
+      <a
+        className="navbar-brand nav-text-main "
+        hrefto="/"
+        style={{ color: props.withMode.textcolor,padding:'0px 5px 0px 5px'}}
+      >
+        {props.title}
+      </a>
       <button
         className="navbar-toggler"
         type="button"
@@ -29,15 +37,22 @@ export default function Navbar(props) {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <Link
+            {/* <Link
               className="nav-Link  nav-text-main"
               to="/"
               style={{ color: props.withMode.textcolor,padding:'0px 5px 0px 5px'}}
             >
               Home <span className="sr-only">(current)</span>
-            </Link>
+            </Link> */}
+            <a
+              className="nav-Link  nav-text-main"
+              href="/"
+              style={{ color: props.withMode.textcolor,padding:'0px 5px 0px 5px'}}
+            >
+              Home <span className="sr-only">(current)</span>
+            </a>
           </li>
-          <li className="nav-item active  nav-text-main">
+          {/* <li className="nav-item active  nav-text-main">
             <Link
               className="nav-Link nav-text-main"
               to="/about"
@@ -54,7 +69,7 @@ export default function Navbar(props) {
             >
               Contact <span className="sr-only">(current)</span>
             </Link>
-          </li>
+          </li> */}
         </ul>
         </div>
         <div style={{padding:'0px 15px 0px 0px'}}>Change theme</div>

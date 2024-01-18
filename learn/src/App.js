@@ -4,14 +4,9 @@ import About from "./components/About.js";
 import Navbar from "./components/Navbar.js";
 import TextForm from "./components/TextForm.js";
 import Alerts from "./components/Alerts.js";
-// import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-//   Link
-// } from "react-router-dom";
+
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 function App() {
   const [Alert, setAlert] = useState(null);
@@ -103,20 +98,25 @@ function App() {
   };
   return (
     <> 
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Navbar mode={setModes} withMode={mode} title="TextInfo" aboutText='About'/>
         <div class="container">
           <Alerts Alert={Alert} />
           <Routes>
           <Route exact path="/" element={<TextForm
-                withMode={mode}
-                Alert={showAlert}
-                heading="Enter Text to analyse"
-              />} />
-          <Route exact path="/about" element={<About />} />
-          </Routes>
-        </div>
-      </BrowserRouter>
+            withMode={mode}
+            Alert={showAlert}
+            heading="Enter Text to analyse"
+            />} />
+            <Route exact path="/about" element={<About />} />
+            </Routes>
+            </div>
+          </BrowserRouter> */}
+          <Navbar mode={setModes} withMode={mode} title="TextInfo" aboutText='About'/>
+          <div class="container">
+            <Alerts Alert={Alert} />
+          </div>
+      
     </>
   );
 }
