@@ -1,11 +1,11 @@
 import "./App.css";
 import React, { useState } from "react";
-// import About from "./components/About.js";
+import About from "./components/About.js";
 import Navbar from "./components/Navbar.js";
 import TextForm from "./components/TextForm.js";
 import Alerts from "./components/Alerts.js";
 
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 function App() {
@@ -98,7 +98,7 @@ function App() {
   };
   return (
     <> 
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Navbar mode={setModes} withMode={mode} title="TextInfo" aboutText='About'/>
         <div class="container">
           <Alerts Alert={Alert} />
@@ -111,8 +111,8 @@ function App() {
             <Route exact path="/about" element={<About />} />
             </Routes>
             </div>
-          </BrowserRouter> */}
-          <Navbar mode={setModes} withMode={mode} title="TextInfo" aboutText='About'/>
+          </BrowserRouter>
+          {/* <Navbar mode={setModes} withMode={mode} title="TextInfo" aboutText='About'/>
           <div class="container">
             <Alerts Alert={Alert} />
             <TextForm
@@ -120,7 +120,7 @@ function App() {
             Alert={showAlert}
             heading="Enter Text to analyse"
             />
-          </div>
+          </div> */}
       
     </>
   );

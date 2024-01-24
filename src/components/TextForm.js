@@ -41,28 +41,29 @@ export default function TextForm(props) {
             id="box"
             ></textarea>
         </div>
-        <button className="btn btn-primary" onClick={handleUpClick} style={{color:props.withMode.textbuttoncolor,backgroundColor: props.withMode.buttoncolor ,border:props.withMode.buttoncolor}}>
+        <button  disabled={text.length==0} className="btn btn-primary m-3" onClick={handleUpClick} style={{color:props.withMode.textbuttoncolor,backgroundColor: props.withMode.buttoncolor ,border:props.withMode.buttoncolor}}>
             
           Convert to Uppercase
         </button>
-        <button className="btn btn-primary m-3" onClick={handleDownClick} style={{color:props.withMode.textbuttoncolor,backgroundColor: props.withMode.buttoncolor ,border:props.withMode.buttoncolor}} >
+        <button  disabled={text.length==0} className="btn btn-primary m-3" onClick={handleDownClick} style={{color:props.withMode.textbuttoncolor,backgroundColor: props.withMode.buttoncolor ,border:props.withMode.buttoncolor}} >
           Convert to Lowercase
         </button>
-        <button className="btn btn-primary m-3" onClick={handleCopyClick} style={{color:props.withMode.textbuttoncolor,backgroundColor: props.withMode.buttoncolor ,border:props.withMode.buttoncolor}}>
+        <button disabled={text.length==0}  className="btn btn-primary m-3" onClick={handleCopyClick} style={{color:props.withMode.textbuttoncolor,backgroundColor: props.withMode.buttoncolor ,border:props.withMode.buttoncolor}}>
           Copy Text
         </button>
-        <button className="btn btn-primary m-3" onClick={handleClearClick} style={{color:props.withMode.textbuttoncolor,backgroundColor: props.withMode.buttoncolor ,border:props.withMode.buttoncolor}}>
+        <button disabled={text.length==0}  className="btn btn-primary m-3" onClick={handleClearClick} style={{color:props.withMode.textbuttoncolor,backgroundColor: props.withMode.buttoncolor ,border:props.withMode.buttoncolor}}>
           Clear Text
         </button>
       </div>
       <div>
         <h1>Your Text Summary</h1>
         <p>
-          {text.split(" ").length} Words {text.split("").length} Character          
+          {text.split(/[ ]+/).filter((a1)=>{return a1.length!==0}).length} Words {text.split("").length} Character          
         </p>
-        <p>{0.008 * text.split(" ").length} Minutes read</p>
+        <p>{0.008 * text.split(" ").filter((a1)=>{return a1.length!==0}).length} disabled={text.length==0}  Minutes read</p>
         <h2>Preview</h2>
         <p>{text}</p>
+        <p>{text.length<0?text:'Nothing to Preview'}</p>
       </div>
       </div>
     </>
